@@ -201,3 +201,29 @@ body {
 .social-media-icons a:hover img {
     transform: translateY(-10px);
 }
+
+/*footer*/
+
+#footer {
+    background-image: linear-gradient(to right,#a517ba,#e517f0);
+    color: #fff;
+}
+
+.footer-img {
+    width: 100%;
+}
+
+
+.footer-box {
+    padding: 20px;
+}
+
+    .footer-box img {
+        width: 120px;
+        margin-bottom: 20px
+    }
+
+.copyright {
+    padding-bottom: 20px;
+    text-align: center; 
+}
