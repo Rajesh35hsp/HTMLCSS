@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<style type="text/css">
+    /* The container */
+    .container, td {
+        display: inline-block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+
+        /* Hide the browser's default checkbox */
+        .container input, td > input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+        .checkmark, td > label::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .container:hover input ~ .checkmark,
+        td:hover input ~ label::after {
+            background-color: #ccc;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        .container input:checked ~ .checkmark,
+        td input:checked ~ label::after {
+            background-color: green;
+            border:solid 2px;
+        }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    td > label:after {
+        content: "";
+       
+    }
+
+    /* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+</style>
+<body>
+
+    <h1>Custom Checkboxes</h1>
+    <label class="container">
+        One
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        Two
+        <input type="checkbox">
+        <span class="checkmark"></span>
+    </label>
+
+    <br />
+
+    <table id="WeekdaysCtrl" class="checkboxlist">
+        <tbody>
+            <tr>
+                <td><input id="WeekdaysCtrl_0" type="checkbox" name="WeekdaysCtrl$0" checked="checked" value="Mon"><label for="WeekdaysCtrl_0">Mon</label></td>
+                <td><input id="WeekdaysCtrl_1" type="checkbox" name="WeekdaysCtrl$1" checked="checked" value="Tue"><label for="WeekdaysCtrl_1">Tue</label></td>
+                <td><input id="WeekdaysCtrl_2" type="checkbox" name="WeekdaysCtrl$2" checked="checked" value="Wed"><label for="WeekdaysCtrl_2">Wed</label></td>
+                <td><input id="WeekdaysCtrl_3" type="checkbox" name="WeekdaysCtrl$3" checked="checked" value="Thu"><label for="WeekdaysCtrl_3">Thu</label></td>
+                <td><input id="WeekdaysCtrl_4" type="checkbox" name="WeekdaysCtrl$4" checked="checked" value="Fri"><label for="WeekdaysCtrl_4">Fri</label></td>
+                <td><input id="WeekdaysCtrl_5" type="checkbox" name="WeekdaysCtrl$5" value="Sat"><label for="WeekdaysCtrl_5">Sat</label></td>
+                <td><input id="WeekdaysCtrl_6" type="checkbox" name="WeekdaysCtrl$6" value="Sun"><label for="WeekdaysCtrl_6">Sun</label></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
