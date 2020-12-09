@@ -43,9 +43,8 @@
 
         /* When the checkbox is checked, add a blue background */
         .container input:checked ~ .checkmark,
-        td input:checked ~ label::after {
+        td input:checked ~ label:after {
             background-color: green;
-            border:solid 2px;
         }
 
     /* Create the checkmark/indicator (hidden when not checked) */
@@ -57,7 +56,8 @@
 
     td > label:after {
         content: "";
-       
+        /*color:white;*/
+        /*✅*/
     }
 
     /* Show the checkmark when checked */
@@ -66,7 +66,16 @@
     }
 
     /* Style the checkmark/indicator */
-    .container .checkmark:after {
+    .container .checkmark:after,
+    td > label:before {
+        content:'';
+         position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+
+        z-index:999;
         left: 9px;
         top: 5px;
         width: 5px;
