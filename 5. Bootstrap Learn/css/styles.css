@@ -1,0 +1,16 @@
+
+body {
+    font-family: 'Ubuntu', sans-serif !important;
+}
+section#title{
+    background-color:#ff4c68
+}
+
+.container-fluid{
+
+    padding:3% 15%;
+}
+
+#imgDog{
+    transform:rotate(25deg);
+}
